@@ -12,11 +12,11 @@ VersionInfoTextVersion=@DEVEL_VERSION@
 AppPublisher=MAGIX
 AppPublisherURL=https://www.texmacs.org/
 AppVersion=@DEVEL_VERSION@
-LicenseFile=..\..\..\distr\TeXmacs-Windows\LICENSE
+LicenseFile=..\..\..\distr\LICENSE
 ;denis end
 
 UninstallDisplayIcon={app}\TeXmacs.ico
-OutputDir=..\..\..\distr\windows
+OutputDir=..\..\..\installer
 OutputBaseFilename=@tm_devel@-installer
 ; SourceDir=../..
 ChangesAssociations=yes
@@ -36,7 +36,7 @@ Root: HKCR; Subkey: "tmfile\DefaultIcon"; ValueType: string; ValueName: ""; Valu
 Root: HKCR; Subkey: "tmfile\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\bin\texmacs.exe"" ""%1""" 
 
 [Files]
-Source: ..\..\..\distr\TeXmacs-Windows\*; DestDir: {app}; Flags: recursesubdirs createallsubdirs ignoreversion
+Source: ..\..\..\distr\*; DestDir: {app}; Flags: recursesubdirs createallsubdirs ignoreversion
 Source: TeXmacs.ico; DestDir: {app}
 
 [Icons]
