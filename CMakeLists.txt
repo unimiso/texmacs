@@ -25,6 +25,9 @@ cmake_minimum_required (VERSION 3.13)
 set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
+list(APPEND CMAKE_PREFIX_PATH ../GnuWin32)
+list(APPEND CMAKE_PREFIX_PATH C:/Programs/Develop/Qt/5.15.2/msvc2019_64)
+find_package (JPEG)
 
 if (NOT CMAKE_BUILD_TYPE)
   set (CMAKE_BUILD_TYPE Debug CACHE STRING
@@ -276,8 +279,6 @@ set (PACKAGE_VERSION 1)
 find_package (PNG)
 find_package (Iconv)
 find_package (ZLIB)
-find_package (JPEG)
-#FIND_PACKAGE(Axel)
 
 ### --------------------------------------------------------------------
 ###  Some Guile related adjustements
